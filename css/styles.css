@@ -56,8 +56,10 @@ body {
     white-space: nowrap;
 }
 
-/* .drop-btn is for mob responsive */
-.drop-btn {
+/* for mob responsive */
+.drop-btn,
+.divider-2,
+.user-drp-btn {
     display: none;
 }
 
@@ -255,6 +257,7 @@ main {
     border-radius: 35px;
     padding: 12px 16px 15px 16px;
 }
+
 /* header styling end */
 
 .sects-div {
@@ -664,7 +667,11 @@ label {
 
 /* mob responsive */
 @media screen and (max-width:600px) {
-    /* .drop-menu {
+    body {
+        flex-direction: column;
+    }
+
+    .drop-menu {
         display: none;
     }
 
@@ -672,38 +679,84 @@ label {
         display: block;
         border: none;
         text-decoration: none;
-        margin-top: 10px;
         padding: 0;
-        padding-top: 2px;
         cursor: pointer;
-        background-color: var(--border-clr);
     }
 
-    .drop-btn:hover {
-        background-color: transparent;
+    .drop-btn i {
+        vertical-align: middle;
+    }
+
+    .drop-btn i:hover {
+        color: var(--text-clr);
     }
 
     .dropdown:focus-within .drop-menu {
         display: block;
-        width: 45vw;
     }
 
-    .dropdown:focus-within .drop-btn {
-        margin-left: 15px;
-        background-color: transparent;
+    .side-bar ul {
+        margin: 0;
     }
- */
+
     .side-bar {
-        padding: 0;
+        padding: 0 20px;
         flex-basis: auto;
+        margin: 10px 5px 5px 5px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    .logo {
+        align-items: center;
+        margin: 0;
+    }
+
+    .divider {
+        margin: 0;
+        color: var(--dark-gray);
+    }
+
+    .logo img {
+        margin-left: 20px;
+    }
+
+    .divider-2 {
+        display: block;
+    }
+
+    .user-drp-btn {
+        display: block;
+        text-decoration: none;
+        border: none;
+        background-color: var(--text-clr);
+        font-size: 14px;
+        color: white;
+        text-align: left;
+        padding: 5px 33px;
+        margin: 10px;
+        border-radius: 35px;
+        ;
+        box-shadow: 0px 0px 5px 2px black;
+    }
+
+    .user-drp-btn:hover {
+        background-color: black;
+    }
+
+    .user-dropdown:focus-within .user {
+        display: block;
+    }
+
+    .user {
         display: none;
+        position: static;
     }
 
     main {
         flex-basis: auto;
-        width: 100vw;
         margin-left: 0px;
-        overflow: hidden;
     }
 
     .main-header {
@@ -723,14 +776,6 @@ label {
         display: block;
         width: 60%;
         margin: 10px auto;
-    }
-
-    .header-btns {
-        width: 100%;
-    }
-
-    .header-active {
-        margin-right: 20%;
     }
 
     .tasks {
@@ -756,7 +801,4 @@ label {
 }
 
 
-/* 1. side bar
-2. main-header----------
-3. table scroll */
 /* THE END */

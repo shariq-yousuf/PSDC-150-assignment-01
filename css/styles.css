@@ -21,7 +21,7 @@
     font-weight: bold;
 }
 
-/* icon styling */
+/* icon styling start */
 .side-bar .material-symbols-outlined:not(.drop-btn .material-symbols-outlined) {
     font-variation-settings:
         'FILL' 0,
@@ -45,7 +45,7 @@
     margin-left: 2px;
 }
 
-/* icon styling */
+/* icon styling end */
 
 
 body {
@@ -56,6 +56,7 @@ body {
     white-space: nowrap;
 }
 
+/* .drop-btn is for mob responsive */
 .drop-btn {
     display: none;
 }
@@ -176,6 +177,7 @@ nav a:hover {
 
 main {
     flex-basis: 80vw;
+    margin-left: 10px;
 }
 
 
@@ -185,7 +187,7 @@ main {
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    margin: 10px;
+    margin: 10px 10px 10px 0;
     padding: 0 30px;
     border-radius: 13px;
     height: 85px;
@@ -253,7 +255,6 @@ main {
     border-radius: 35px;
     padding: 12px 16px 15px 16px;
 }
-
 /* header styling end */
 
 .sects-div {
@@ -265,7 +266,7 @@ main {
 .tasks {
     background-color: white;
     padding: 30px;
-    margin: 0 10px;
+    margin-right: 10px;
     border-radius: 13px;
     border: 3px solid var(--bg-clr);
     font-size: 12px;
@@ -422,6 +423,7 @@ label {
 }
 
 /* sectoin-1 table styling end */
+/* section-1 styling end */
 
 
 .sects-div-child {
@@ -435,7 +437,7 @@ label {
     flex-basis: 50%;
     font-size: 12px;
     padding: 30px;
-    margin: 10px;
+    margin: 10px 10px 10px 0;
     border-radius: 13px;
     background-color: white;
 }
@@ -661,8 +663,8 @@ label {
 
 
 /* mob responsive */
-@media screen and (max-width:480px) {
-    .drop-menu {
+@media screen and (max-width:600px) {
+    /* .drop-menu {
         display: none;
     }
 
@@ -683,26 +685,78 @@ label {
 
     .dropdown:focus-within .drop-menu {
         display: block;
-        margin-left: 0;
-        margin: 15px;
+        width: 45vw;
     }
 
     .dropdown:focus-within .drop-btn {
         margin-left: 15px;
         background-color: transparent;
     }
-
+ */
     .side-bar {
         padding: 0;
+        flex-basis: auto;
+        display: none;
+    }
+
+    main {
+        flex-basis: auto;
+        width: 100vw;
+        margin-left: 0px;
+        overflow: hidden;
+    }
+
+    .main-header {
+        flex-direction: column;
+        justify-content: center;
+        margin: 5px;
+        height: 150px;
+        overflow: hidden;
+        padding: 20px;
     }
 
     #search {
-        width: fit-content;
+        width: 85%;
     }
 
-    .header-search-btn {
-        margin-right: 0;
+    .header-drpdown {
+        display: block;
+        width: 60%;
+        margin: 10px auto;
+    }
+
+    .header-btns {
+        width: 100%;
+    }
+
+    .header-active {
+        margin-right: 20%;
+    }
+
+    .tasks {
+        overflow-x: scroll;
+        margin: 0 5px;
+    }
+
+    .sects-div-child {
+        flex-direction: column;
+    }
+
+    .productivity {
+        flex-basis: auto;
+        margin: 5px;
+        height: 270px;
+    }
+
+    .projects {
+        flex-basis: auto;
+        margin: 0 5px;
+        height: 270px;
     }
 }
 
+
+/* 1. side bar
+2. main-header----------
+3. table scroll */
 /* THE END */
